@@ -57,6 +57,23 @@ class BucketEntry:
         return cls(**d)
 
 
+@dataclass
+class DiscoveryReport:
+    queries_used: list[str]
+    categories: list[str]
+    days_back: int
+    total_search_results: int
+    duplicates_skipped: int
+    total_screened: int
+    failed: int
+    by_bucket: dict[str, int]
+    entries: list[BucketEntry]
+    run_at: str
+
+    def to_dict(self) -> dict:
+        return dataclasses.asdict(self)
+
+
 class FetchError(Exception):
     pass
 

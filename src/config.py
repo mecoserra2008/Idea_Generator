@@ -22,3 +22,26 @@ CRITICAL_FLAGS = {
 }
 
 CRITIC_TIMEOUT_SECONDS = 120
+
+# --- Discovery defaults ---
+DISCOVERY_DEFAULT_QUERIES = [
+    "quantitative trading machine learning",
+    "algorithmic trading deep learning",
+    "statistical arbitrage",
+    "portfolio optimization reinforcement learning",
+    "market microstructure neural network",
+    "high frequency trading",
+]
+
+DISCOVERY_DEFAULT_CATEGORIES = [
+    "q-fin.TR",   # Trading and Market Microstructure
+    "q-fin.PM",   # Portfolio Management
+    "q-fin.ST",   # Statistical Finance
+    "q-fin.CP",   # Computational Finance
+    "cs.LG",      # Machine Learning (cross-listed)
+    "stat.ML",    # Machine Learning (cross-listed)
+]
+
+DISCOVERY_MAX_RESULTS = 50        # per query
+DISCOVERY_DAYS_BACK = 7           # default lookback window
+DISCOVERY_RATE_DELAY = 3.0        # seconds between API calls (arXiv asks for 3s)
